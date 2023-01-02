@@ -2,10 +2,10 @@
 
 Git repo to connect Synapse pipeline to Azure Functions using following security:
 
-- Synapse data exfiltration prevention to prevent insider attacks
+- Synapse data exfiltration protection to prevent insider attacks
 - Private endpoints to limit exposure of Azure Function to internal only
 - Azure AD authentication using identity to access Azure Function
-- Whitelisting Synapse Managed Identity as only allowed identity to access Azure Function
+- Whitelisting Synapse managed identity as only allowed identity to access Azure Function
 
 See also overview below:
 
