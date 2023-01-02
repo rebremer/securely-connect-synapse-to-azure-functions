@@ -1,0 +1,7 @@
+{
+    "privateLinkResourceId": "/subscriptions/@sub/resourceGroups/@rg/providers/Microsoft.Web/sites/@fun_name",
+        "groupId": "sites",
+        "fqdns": [
+            "@fun_name.azurewebsites.net"
+        ]
+}

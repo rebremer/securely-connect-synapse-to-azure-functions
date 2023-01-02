@@ -1,0 +1,43 @@
+{
+    "name": "Webactivity_AzureFunction2",
+    "properties": {
+        "activities": [
+            {
+                "name": "Call azure Function",
+                "type": "WebActivity",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "url": "@pipeline().parameters.function_url",
+                    "connectVia": {
+                        "referenceName": "AutoResolveIntegrationRuntime",
+                        "type": "IntegrationRuntimeReference"
+                    },
+                    "method": "GET",
+                    "authentication": {
+                        "type": "MSI",
+                        "resource": "@pipeline().parameters.function_resource"
+                    }
+                }
+            }
+        ],
+        "parameters": {
+            "function_url": {
+                "type": "string"
+            },
+            "function_resource": {
+                "type": "string"
+            }
+        },
+        "annotations": [],
+        "lastPublishTime": "2022-12-27T12:48:42Z"
+    },
+    "type": "Microsoft.Synapse/workspaces/pipelines"
+}
